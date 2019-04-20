@@ -1,0 +1,22 @@
+{
+  "name": "effective-giggle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrP-11/effective-giggle.git"
+  },
+  "author": "PrP-11",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrP-11/effective-giggle/issues"
+  },
+  "homepage": "https://github.com/PrP-11/effective-giggle#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
