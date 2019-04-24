@@ -13,5 +13,5 @@ app.use('/api', require('./routes/api'));
 
 // listen for request
 app.listen(process.env.port || 5000, function(){
-  console.log('Server is now listening!');
+  console.log('Server is now listening at port 5000!');
 });
