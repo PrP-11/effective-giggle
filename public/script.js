@@ -1,15 +1,19 @@
 function makeTable(data) {
   $("#user-data").html('');
-  $.each(data, function(i, field){
-    var list = "<tr><td>" + field.userName + "</td><td>"
+  if(data[0]){
+    $.each(data, function(i, field){
+      var list = "<tr><td>" + field.userName + "</td><td>"
       + field.emailId + "</td><td>"
       + field.phoneNo + "</td><td>"
       + field.dateTime + "</td><td>"
       + '<button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#confirm-delete" id="'+ field.emailId
       +'" onClick="confirmDelete(this.id)">Delete</button></td></tr>';
 
-    $('#user-data').append(list);
-  });
+      $('#user-data').append(list);
+    });
+  } else{
+    $("#user-data").html('No user found!');
+  }
 }
 
 function deleteUser(id){
@@ -47,7 +51,7 @@ function displayAlert(type, msg) {
   $("#alert-div").html(alert);
   $(".alert")
     .delay(800)
-    .slideUp(500, function() {
+    .slideUp(1000, function() {
       $(this).alert("close");
     });
 }
